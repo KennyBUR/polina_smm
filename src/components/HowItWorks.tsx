@@ -58,18 +58,16 @@ const HowItWorks: React.FC = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {features.map((feature, index) => (
-              <div 
-                key={index}
-                className="bg-white p-4 md:p-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group"
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xs md:text-sm font-bold text-gray-900 mb-2 leading-tight" style={{ fontFamily: 'Good Times Grotesk, sans-serif' }}>
+              <div key={index} className="card">
+                <div className="text-center flex flex-col h-full">
+                  <div className="card-icon">{feature.icon}</div>
+                  <h3
+                    className="text-xs md:text-sm font-bold text-gray-900 mb-2 leading-tight"
+                    style={{ fontFamily: 'Good Times Grotesk, sans-serif' }}
+                  >
                     {feature.title}
                   </h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">
+                  <p className="text-xs text-gray-600 leading-relaxed flex-grow">
                     {feature.description}
                   </p>
                 </div>

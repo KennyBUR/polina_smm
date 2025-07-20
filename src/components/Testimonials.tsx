@@ -123,9 +123,9 @@ const Testimonials: React.FC = () => {
             <div className="overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {visibleSlides.map((testimonial, index) => (
-                  <div 
+                  <div
                     key={`${currentSlide}-${index}`}
-                    className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="card bg-gradient-to-br from-gray-50 to-white border border-gray-200 p-8 transform hover:scale-105"
                   >
                     <div className="flex items-center mb-6">
                       <div className={`w-16 h-16 ${testimonial.photo} rounded-full mr-4 flex items-center justify-center`}>

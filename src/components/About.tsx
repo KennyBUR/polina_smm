@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Lightbulb } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 const About: React.FC = () => {
   return (

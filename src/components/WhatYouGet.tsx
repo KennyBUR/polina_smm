@@ -48,18 +48,16 @@ const WhatYouGet: React.FC = () => {
           
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {benefits.map((benefit, index) => (
-              <div 
-                key={index}
-                className="bg-white p-4 md:p-6 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group"
-              >
-                <div className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-gray-50 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xs md:text-sm font-bold text-gray-900 mb-2 leading-tight" style={{ fontFamily: 'Good Times Grotesk, sans-serif' }}>
+              <div key={index} className="card">
+                <div className="text-center flex flex-col h-full">
+                  <div className="card-icon">{benefit.icon}</div>
+                  <h3
+                    className="text-xs md:text-sm font-bold text-gray-900 mb-2 leading-tight"
+                    style={{ fontFamily: 'Good Times Grotesk, sans-serif' }}
+                  >
                     {benefit.title}
                   </h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">
+                  <p className="text-xs text-gray-600 leading-relaxed flex-grow">
                     {benefit.description}
                   </p>
                 </div>
